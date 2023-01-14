@@ -1,0 +1,177 @@
+/* ====== View Styles ====== */
+
+.div-scale {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-white-primary);
+    opacity: 0.7 !important;
+    border-radius: 0.625rem;
+    border: 0.1rem solid var(--bg-black-primary) !important;
+    z-index: 9 !important;
+}
+
+.div-scale span {
+    opacity: 1 !important;
+    font-weight: 700;
+    padding: 0 0.8rem;
+    width: auto;
+}
+
+.div-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 3.2rem;
+    right: 0.625rem;
+    width: 4.57rem;
+    height: auto;
+    /* padding: 0.4rem 0; */
+    background-color: var(--bg-white-secondary);
+    outline: var(--bg-black-primary) solid 0.1rem;
+}
+
+.div-controls .div-range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem !important;
+    max-height: 8rem !important;
+    /* margin: 0 0.2rem; */
+    padding-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.div-controls .div-range input[type="range"] {
+    -webkit-appearance: none;
+    transform: rotate(90deg);
+    -moz-transform: rotate(180deg);
+    cursor: pointer;
+    background: transparent;
+    max-height: inherit;
+}
+
+.div-controls .div-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--navbar-color-primary);
+    width: 0.4rem;
+    height: 1.5rem;
+    outline: var(--bg-black-primary) solid 0.1rem;
+    border: none;
+    border-radius: 0;
+    transform: translateY(-0.53rem);
+}
+
+.div-controls .div-range input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: var(--navbar-color-secondary);
+}
+
+.div-controls .div-range input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 0.375rem;
+    background-color: var(--bg-track-primary);
+    outline: var(--bg-black-primary) solid 0.1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.div-controls .div-range input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: var(--navbar-color-primary);
+    width: 1.5rem;
+    height: 0.5rem;
+    outline: var(--bg-black-primary) solid 0.1rem;
+    border: none;
+    border-radius: 0;
+}
+
+.div-controls .div-range input[type="range"]::-moz-range-thumb:hover {
+    background-color: var(--navbar-color-secondary);
+}
+
+.div-controls .div-range input[type="range"]::-moz-range-track {
+    -webkit-appearance: none;
+    height: 100%;
+    width: 0.38rem;
+    background-color: var(--bg-track-primary);
+    outline: var(--bg-black-primary) solid 0.1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.div-controls .div-levels {
+    /* margin: 0 0.3rem; */
+    border-left: 1px solid var(--font-black-primary);
+}
+
+.div-controls .div-levels .controls-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.div-controls .div-levels .controls-ul .controls-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    /* outline: #c9c9c9b6 solid 1px; */
+    /* background: #c9c9c9b6; */
+}
+
+.div-controls .div-levels .controls-ul .controls-li:hover {
+    background-color: var(--navbar-color-primary) !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.div-controls .div-levels .controls-ul .controls-li button {
+    padding: 0.25rem 0.4rem;
+    color: var(--font-black-primary);
+    width: 100%;
+}
+
+.div-controls .div-levels .controls-ul .controls-li button p span {
+    margin-left: 0.02rem;
+}
+
+.div-controls .div-levels .controls-ul .controls-li button:hover > p {
+    color: var(--bg-white-primary);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.div-controls .div-levels .controls-ul .controls-li button .controls-p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.div-magnification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.875rem;
+    right: 0.625rem;
+    width: 4.57rem;
+    height: 1.25rem;
+    background-color: var(--bg-white-secondary);
+    outline: var(--bg-black-primary) solid 0.1rem;
+}
+
+.div-magnification p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--font-black-primary);
+}
+
+.div-magnification p span {
+    margin-left: 0.1rem;
+}

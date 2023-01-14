@@ -1,0 +1,136 @@
+/* ====== Report Styles ====== */
+
+.div-report {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 20vw;
+    width: 60vw;
+    height: 89vh;
+    margin: 0.5rem;
+    overflow-y: scroll;
+    background-color: white;
+    outline: var(--black) solid 0.1rem;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.div-report::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.div-report::-webkit-scrollbar-track {
+    background: none;
+}
+
+.div-report::-webkit-scrollbar-thumb {
+    background: var(--purple);
+}
+
+.div-report::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+}
+
+.div-report::-webkit-scrollbar-thumb:active {
+    background: var(--purple);
+}
+
+.div-report .basic-information,
+.div-report .report-information,
+.div-report .report-buttons {
+    margin: 1.5rem;
+}
+
+.div-report .basic-information h5,
+.div-report .report-information h5 {
+    font-weight: 900;
+    margin: 1.5rem 0;
+}
+
+.div-report .basic-information .row,
+.div-report .report-information .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.div-report .basic-information label,
+.div-report .report-information label {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.div-report .basic-information input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+    padding-left: 0.75rem;
+}
+
+.div-report .report-information input {
+    width: 16rem;
+    font-size: 0.95rem;
+    padding: 0.2rem 0;
+    padding-left: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.div-report .basic-information a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgb(26, 115, 232);
+}
+
+.div-report .basic-information input[type="checkbox"] {
+    width: auto;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+    margin-right: 0.5rem;
+}
+
+.div-report .basic-information textarea,
+.div-report .report-information textarea {
+    width: 100%;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 0.2rem 0;
+    padding-left: 0.75rem;
+}
+
+.div-report .basic-information table thead,
+.div-report .report-information table thead {
+    font-size: 0.95rem;
+}
+
+.div-report .basic-information table thead th,
+.div-report .report-information table thead th {
+    width: 50%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.div-report .basic-information table tbody,
+.div-report .report-information table tbody {
+    font-size: 0.9rem;
+}
+
+.div-report .basic-information table tbody a,
+.div-report .report-information table tbody a {
+    font-size: 0.9rem;
+}
+
+.div-report .report-information label.label-required {
+    color: #f44336;
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+.div-report .report-buttons .row .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-report .report-buttons button {
+    padding: 0.8rem 1.2rem;
+}

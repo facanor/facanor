@@ -1,0 +1,58 @@
+/* ====== Toastify Styles ====== */
+
+:root {
+    --toastify-toast-width: 20rem;
+    --toastify-toast-min-height: 4rem;
+    --toastify-toast-max-height: 12rem;
+    --toastify-font-family: LouisGeorgeCafe;
+    --toastify-z-index: 9999;
+
+    --toastify-color-light: var(--bg-white-primary);
+    --toastify-color-dark: var(--bg-black-secondary);
+    --toastify-color-success: var(--alert-success-primary);
+    --toastify-color-info: var(--alert-info-primary);
+    --toastify-color-warning: var(--alert-warning-primary);
+    --toastify-color-error: var(--alert-error-primary);
+
+    --toastify-text-color-light: var(--font-black-primary);
+    --toastify-text-color-dark: var(--font-white-primary);
+    --toastify-text-color-success: var(--font-white-primary);
+    --toastify-text-color-info: var(--font-white-primary);
+    --toastify-text-color-warning: var(--font-black-primary);
+    --toastify-text-color-error: var(--font-white-primary);
+
+    --toastify-color-progress-light: var(--bg-white-primary);
+    --toastify-color-progress-dark: var(--bg-black-secondary);
+}
+
+.Toastify__toast {
+    margin-bottom: 0.625rem;
+    font-size: 0.95rem;
+    border-radius: 0;
+    outline: var(--bg-black-primary) solid 0.1rem;
+}
+
+.Toastify__toast a {
+    color: var(--alert-info-primary);
+}
+
+.Toastify__toast a:hover {
+    opacity: 0.6;
+    color: var(--alert-info-primary);
+}
+
+.Toastify__close-button {
+    display: flex;
+    align-self: center;
+    margin-inline-start: 0.4rem;
+    margin-inline-end: 0.4rem;
+}
+
+.Toastify__close-button > svg {
+    height: 1.1rem;
+    width: 0.95rem;
+}
+
+.Toastify__toast-icon {
+    margin-inline-end: 0.9rem;
+}

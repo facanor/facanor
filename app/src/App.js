@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+/* ====== Components ====== */
+import Navbar from "./components/navbar/navbar";
+import Overlay from "./components/overlay/overlays";
+import Footer from "./components/footer/footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/* ====== Contexts ====== */
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { SessionProvider } from "./contexts/SessionContext";
+import { ToggleProvider } from "./contexts/ToggleContext";
+import { ViewerProvider } from "./contexts/ViewerContext";
+
+const App = () => {
+    return (
+        <ThemeProvider>
+            <SessionProvider>
+                <ToggleProvider>
+                    <ViewerProvider>
+                        <div id="navbar">
+                            <Navbar />
+                        </div>
+                        <div id="viewer">
+                            <Overlay />
+                        </div>
+                        <div id="footer">
+                            <Footer />
+                        </div>
+                    </ViewerProvider>
+                </ToggleProvider>
+            </SessionProvider>
+        </ThemeProvider>
+    );
+};
 
 export default App;

@@ -1,0 +1,75 @@
+.annotations-table {
+    display: block;
+    position: absolute;
+    left: 2.75rem;
+    width: auto;
+    height: auto;
+    margin: 0.625rem;
+    background-color: var(--bg-white-secondary);
+    outline: var(--emphasis-color-primary) solid 0.1rem;
+    transition: all 0.3s ease-in-out 0s;
+    max-width: 30rem;
+}
+
+.annotations-table table {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    background-color: var(--bg-white-primary);
+}
+
+.annotations-table table th {
+    padding: 0.25rem 0.35rem;
+}
+
+.annotations-table table th,
+.annotations-table table .cell-center {
+    text-align: center;
+}
+
+.annotations-table table .nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.annotations-table table .nav-ul hr {
+    width: 100%;
+    margin: 0;
+}
+
+.annotations-table table .nav-ul .nav-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: inherit;
+    margin: 0;
+}
+
+.annotations-table table .nav-ul .nav-li button {
+    padding: 0 0.3rem;
+}
+
+.annotations-table table .nav-ul .nav-li i {
+    color: var(--font-black-primary);
+    font-size: 0.85rem;
+    /* width: 1rem; */
+}
+
+.annotations-table table .nav-ul .nav-li:hover {
+    background-color: var(--navbar-color-primary) !important;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.annotations-table table .nav-ul .nav-li button:hover > i {
+    color: var(--font-white-primary);
+    transition: all 0.3s ease-in-out 0s;
+}

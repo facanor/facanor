@@ -1,0 +1,190 @@
+/* ====== Footer Styles ====== */
+
+#footer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--font-white-primary);
+    background-color: var(--footer-color-primary);
+}
+
+/* ====== Footer Buttons ====== */
+
+#footer .footer-buttons {
+    display: inline-flex;
+    position: relative;
+    left: 0;
+    margin-left: 0.8rem;
+}
+
+#footer .footer-buttons .nav-ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+#footer .footer-buttons .nav-ul .nav-li {
+    margin-right: 0.3rem;
+}
+
+#footer .footer-buttons .nav-ul .nav-li:hover {
+    color: var(--font-black-primary);
+    background-color: var(--footer-color-secondary);
+}
+
+#footer .footer-buttons .nav-ul .nav-li button {
+    font-size: 0.75rem;
+    padding: 0 0.3rem;
+}
+
+/* ====== Footer Information ====== */
+
+#footer .footer-information {
+    display: inline-flex;
+    position: relative;
+    margin-left: 0.3rem;
+}
+
+#footer .footer-information .footer-coordinates {
+    width: 11rem;
+    margin: 0 0.5rem;
+}
+
+#footer .footer-information .footer-zoom {
+    width: 6rem;
+    margin: 0 0.5rem;
+}
+
+#footer .footer-information .footer-rgb {
+    width: 7rem;
+    margin: 0 0.5rem;
+}
+
+#footer .footer-information .footer-hsl {
+    width: 7.5rem;
+    margin: 0 0.5rem;
+}
+
+#footer
+    .footer-information
+    .footer-coordinates
+    .image-coordinates
+    .image-coordinates-value,
+#footer .footer-information .footer-zoom .image-zoom .image-zoom-value,
+#footer .footer-information .footer-rgb .image-rgb .image-rgb-value,
+#footer .footer-information .footer-hsl .image-hsl .image-hsl-value {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ====== Footer Alerts ====== */
+
+#footer .footer-alerts {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    margin-right: 0.8rem;
+}
+
+#footer .footer-alerts .nav-ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#footer .footer-alerts .nav-ul .nav-li {
+    margin-right: 0.3rem;
+}
+
+#footer .footer-alerts .nav-ul .nav-li:hover {
+    color: var(--font-black-primary);
+    background-color: var(--footer-color-secondary);
+}
+
+#footer .footer-alerts .nav-ul .nav-li button {
+    font-size: 0.75rem;
+    padding: 0 0.3rem;
+}
+
+/* ====== Theme Toggle Button ====== */
+
+#footer .footer-alerts .nav-ul .nav-li.button-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    color: var(--font-white-primary);
+    padding: 0 0.14rem !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.theme-toggle:hover {
+    color: var(--font-black-primary);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.theme-toggle svg {
+    stroke-linecap: round;
+}
+
+.theme-toggle svg.sun-and-moon .sun,
+.theme-toggle svg.sun-and-moon .sun-beams,
+.theme-toggle svg.sun-and-moon .moon {
+    transform-origin: center center;
+}
+
+.theme-toggle svg.sun-and-moon .sun,
+.theme-toggle svg.sun-and-moon .moon {
+    fill: var(--font-white-primary);
+}
+
+.button-toggle:hover .theme-toggle svg.sun-and-moon .sun,
+.button-toggle:hover .theme-toggle svg.sun-and-moon .moon {
+    fill: var(--font-black-primary);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.theme-toggle svg.sun-and-moon .sun-beams {
+    stroke: var(--font-white-primary);
+    stroke-width: 1px;
+}
+
+.button-toggle:hover .theme-toggle svg.sun-and-moon .sun-beams {
+    stroke: var(--font-black-primary);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.theme-toggle[data-theme="dark"] svg.sun-and-moon .sun {
+    transform: scale(1.35);
+}
+
+.theme-toggle[data-theme="dark"] svg.sun-and-moon .sun-beams {
+    opacity: 0;
+}
+
+.theme-toggle[data-theme="dark"] svg.sun-and-moon .moon > circle {
+    transform: translateX(-6.3px);
+
+    @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 10;
+    }
+}

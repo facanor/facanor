@@ -1,0 +1,283 @@
+/* ====== Viewer Styles ====== */
+
+#viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 2rem);
+}
+
+#viewer .viewer-osd {
+    width: inherit;
+    height: 100%;
+}
+
+#viewer .viewer-osd div:focus {
+    outline: none !important;
+}
+
+.navigator {
+    background: var(--bg-white-secondary) !important;
+    border: 0.1rem solid var(--bg-black-primary) !important;
+}
+
+/* ====== OpenSeaDragon Styles ====== */
+
+.openseadragon-message > div > div {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.openseadragon-message > div > div > div {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 50% !important;
+}
+
+/* ====== Annotorious Annotations Styles ====== */
+
+/* Bordes y relleno de las anotaciones */
+/* Externa */
+svg.a9s-annotationlayer .a9s-selection .a9s-outer,
+svg.a9s-annotationlayer .a9s-annotation .a9s-outer {
+    stroke: var(--bg-black-primary);
+    stroke-width: 0.375rem;
+    fill: none;
+}
+
+/* Interna */
+svg.a9s-annotationlayer .a9s-selection .a9s-inner,
+svg.a9s-annotationlayer .a9s-annotation .a9s-inner {
+    stroke: #00ab00;
+    stroke-width: 0.25rem;
+    fill: transparent;
+}
+
+/* Hover interno */
+svg.a9s-annotationlayer .a9s-selection .a9s-inner:hover,
+svg.a9s-annotationlayer .a9s-annotation .a9s-inner:hover {
+    stroke: #00e000;
+}
+
+/* Para la anotación de linea */
+
+svg.a9s-annotationlayer .a9s-selection line,
+svg.a9s-annotationlayer .a9s-annotation line {
+    fill: transparent;
+    cursor: pointer;
+    vector-effect: non-scaling-stroke;
+}
+
+svg.a9s-annotationlayer .a9s-selection line.a9s-outer,
+svg.a9s-annotationlayer .a9s-annotation line.a9s-outer {
+    stroke: var(--bg-black-primary);
+    stroke-width: 0.25rem;
+    fill: none;
+}
+
+svg.a9s-annotationlayer .a9s-selection line.a9s-inner,
+svg.a9s-annotationlayer .a9s-annotation line.a9s-inner {
+    stroke: #ffee00ce;
+    stroke-width: 0.125rem;
+    fill: transparent;
+}
+
+/* Para la anotación de punto */
+/* Externa */
+svg.a9s-annotationlayer .a9s-annotation.a9s-point .a9s-outer {
+    stroke: var(--bg-black-primary);
+    stroke-width: 0.1rem;
+    fill: #00ab00a9;
+}
+
+/* Hover externo */
+svg.a9s-annotationlayer .a9s-annotation.a9s-point .a9s-outer:hover {
+    fill: #00e000;
+}
+
+/* Bordes y relleno de las anotaciones al seleccionar */
+svg.a9s-annotationlayer .a9s-annotation.editable .a9s-inner {
+    stroke: var(--bg-white-primary);
+}
+
+/* Sombreado de la anotación al pasar el mouse por encima */
+svg.a9s-annotationlayer .a9s-annotation.editable .a9s-inner:hover {
+    fill: rgba(255, 255, 255, 0);
+}
+
+/* Esquinas o vértices de una anotación */
+/* Interna */
+svg.a9s-annotationlayer .a9s-handle .a9s-handle-inner {
+    display: none;
+}
+
+/* Hover interno */
+svg.a9s-annotationlayer .a9s-handle:hover .a9s-handle-inner {
+    fill: #00e000;
+}
+
+/* Externa */
+svg.a9s-annotationlayer .a9s-handle .a9s-handle-outer {
+    stroke: var(--bg-black-primary);
+    fill: var(--bg-white-primary);
+}
+
+/* Transparencia al crear o seleccionar una anotación */
+svg.a9s-annotationlayer .a9s-selection-mask {
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+/* Para la anotación de poligono */
+svg.a9s-annotationlayer .a9s-annotation.editable.improved-polygon .a9s-outer {
+    stroke-width: 0.4375rem !important;
+}
+
+svg.a9s-annotationlayer .a9s-annotation.editable.improved-polygon .a9s-inner {
+    stroke-dasharray: 0 !important;
+    stroke-width: 0.25rem !important;
+}
+
+svg.a9s-annotationlayer .a9s-selection.improved-polygon .a9s-inner {
+    stroke-dasharray: 4 !important;
+}
+
+/* ====== Annotorious Editor/Popup Styles ====== */
+
+.r6o-editor {
+    color: var(--font-black-primary) !important;
+    font-family: LouisGeorgeCafe !important;
+    line-height: 1.4rem !important;
+    font-size: 1.3rem !important;
+    margin-left: 0 !important;
+}
+
+/* Edit / Delete */
+.r6o-editor .r6o-arrow {
+    display: none !important;
+}
+
+/* Sessions */
+.r6o-editor .r6o-editor-inner {
+    background-color: var(--bg-white-secondary) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 0.1rem solid var(--bg-black-primary) !important;
+    max-height: 18rem !important;
+    max-width: 20rem !important;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--navbar-color-primary) transparent;
+}
+
+.r6o-editor .r6o-editor-inner::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.r6o-editor .r6o-editor-inner::-webkit-scrollbar-track {
+    background: none;
+}
+
+.r6o-editor .r6o-editor-inner::-webkit-scrollbar-thumb {
+    background: var(--navbar-color-primary);
+}
+
+.r6o-editor .r6o-editor-inner::-webkit-scrollbar-thumb:hover {
+    background: var(--navbar-color-secondary);
+}
+
+.r6o-editor .r6o-editor-inner::-webkit-scrollbar-thumb:active {
+    background: var(--navbar-color-primary);
+}
+
+/* Widgets */
+.r6o-editor .r6o-widget {
+    border-bottom: 0.1rem solid #bebebe !important;
+}
+
+/* Comments */
+.r6o-editor .r6o-widget.comment {
+    font-size: 0.95rem !important;
+    background-color: var(--bg-white-primary) !important;
+}
+
+.r6o-editor .r6o-widget.comment .r6o-editable-text {
+    font-family: LouisGeorgeCafe !important;
+    font-size: 0.95rem !important;
+}
+
+.r6o-editor .r6o-widget.comment .r6o-lastmodified {
+    border: 0.1rem solid #bebebe !important;
+    border-radius: 5px !important;
+    font-size: 0.75rem !important;
+}
+
+.r6o-editor .r6o-widget.comment .r6o-arrow-down {
+    border: none !important;
+    border-radius: 0 !important;
+    top: 8px !important;
+    right: 12px !important;
+}
+
+.r6o-editor .r6o-widget.comment .r6o-arrow-down svg {
+    width: 80%;
+    height: 80%;
+}
+
+.r6o-editor .r6o-widget.comment .r6o-comment-dropdown-menu {
+    border: 0.1rem solid #bebebe !important;
+}
+
+/* Tags */
+.r6o-editor .r6o-widget.r6o-tag {
+    max-width: 24rem !important;
+}
+
+.r6o-widget.r6o-tag ul.r6o-taglist li {
+    border: 0.1rem solid #bebebe !important;
+    border-radius: 5px !important;
+}
+
+/* Footer delete */
+.r6o-editor .r6o-footer .r6o-btn {
+    font-size: 0.88rem !important;
+}
+
+.r6o-editor .r6o-footer .r6o-btn:not(.delete-annotation, .outline) {
+    border: 0.1rem solid var(--alert-info-primary);
+    background-color: var(--bg-white-secondary);
+    color: var(--alert-info-primary);
+}
+
+.r6o-editor .r6o-footer .r6o-btn:not(.delete-annotation, .outline):hover {
+    border: 0.1rem solid var(--bg-black-primary);
+    background-color: var(--alert-info-primary);
+    color: var(--font-white-primary);
+}
+
+.r6o-editor .r6o-footer .r6o-btn.delete-annotation {
+    top: 10px !important;
+    left: 10px !important;
+    color: var(--alert-error-primary) !important;
+    margin-right: 0 !important;
+}
+
+.r6o-editor .r6o-footer .r6o-btn.delete-annotation:hover {
+    color: var(--font-white-primary) !important;
+}
+
+/* Cancel */
+.r6o-editor .r6o-footer .r6o-btn.outline {
+    margin-left: 3.4rem !important;
+    border: 0.1rem solid var(--alert-error-primary) !important;
+    color: var(--alert-error-primary) !important;
+}
+
+.r6o-editor .r6o-footer .r6o-btn.outline:hover {
+    border: 0.1rem solid var(--bg-black-primary) !important;
+    background-color: var(--alert-error-primary);
+    color: var(--font-white-primary) !important;
+}

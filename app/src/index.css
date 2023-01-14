@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ====== Global Styles ====== */
+
+:root.dark {
+    --bg-white-primary: #ffffff;
+    --bg-white-secondary: #efefef;
+    --bg-black-primary: #000000;
+    --bg-black-secondary: #141414;
+    --font-white-primary: #ffffff;
+    --font-white-secondary: #efefef;
+    --font-black-primary: #000000;
+    --font-black-secondary: #0f0f0f;
+    --navbar-color-primary: #02355f;
+    --navbar-color-secondary: #8aafcc;
+    --footer-color-primary: #021424;
+    --footer-color-secondary: #8aafcc;
+    --bg-track-primary: #bbcfdd;
+    --alert-success-primary: #198754;
+    --alert-info-primary: #0d6efd;
+    --alert-warning-primary: #ffc107;
+    --alert-error-primary: #dc3545;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root:not(.dark) {
+    --bg-white-primary: #ffffff;
+    --bg-white-secondary: #efefef;
+    --bg-black-primary: #000000;
+    --bg-black-secondary: #141414;
+    --font-white-primary: #ffffff;
+    --font-white-secondary: #efefef;
+    --font-black-primary: #000000;
+    --font-black-secondary: #0f0f0f;
+    --navbar-color-primary: #5d1a4c;
+    --navbar-color-secondary: #dcbcd4;
+    --footer-color-primary: #200a1a;
+    --footer-color-secondary: #c794ba;
+    --bg-track-primary: #e3cadd;
+    --alert-success-primary: #198754;
+    --alert-info-primary: #0d6efd;
+    --alert-warning-primary: #ffc107;
+    --alert-error-primary: #dc3545;
+}
+
+@font-face {
+    font-family: LouisGeorgeCafe;
+    src: url(../public/fonts/LouisGeorgeCafe.ttf);
+}
+
+html {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    font-family: LouisGeorgeCafe;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-white-primary);
+}
+
+.btn {
+    padding: 0;
+    border: 0;
+    color: var(--font-white-primary);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+ul li {
+    list-style: none;
 }

@@ -1,0 +1,121 @@
+/* ====== Session Styles ====== */
+
+.session-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: inherit;
+}
+
+.session-bar .session-name {
+    color: var(--font-white-primary);
+    font-size: 0.83rem;
+    line-height: 0.8rem !important;
+    margin: 0;
+}
+
+.session-bar .nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.session-bar .nav-ul .nav-li {
+    display: inline-block;
+}
+
+.session-bar .nav-ul .nav-li hr {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.session-bar .nav-ul .username {
+    margin-right: 0.5rem;
+}
+
+.session-bar .nav-ul .nav-li button:hover {
+    color: var(--navbar-color-primary);
+    background-color: var(--navbar-color-secondary);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.session-bar .nav-ul .nav-li button:hover > i {
+    color: var(--font-black-primary);
+}
+
+.session-bar .nav-ul .nav-li button .navbar-p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 0.8rem !important;
+}
+
+.session-bar .nav-ul .nav-li button {
+    border-radius: 0;
+    padding: 0.2rem 0.6rem;
+}
+
+.session-bar .nav-ul .nav-li button.show {
+    background-color: var(--navbar-color-secondary);
+}
+
+.session-bar .nav-ul .nav-li button.show > i {
+    color: var(--font-black-primary);
+}
+
+.session-bar .nav-ul .nav-li i {
+    color: var(--font-white-primary);
+    font-size: 1rem;
+}
+
+.session-bar .nav-ul .nav-li p span {
+    font-weight: 600;
+}
+
+.session-bar .dropdown-menu {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: -0.05rem !important;
+    left: -1rem !important;
+    padding: 0;
+    margin: 0;
+    background-color: var(--font-white-secondary);
+    border-radius: 0;
+}
+
+.session-bar .dropdown-menu.show {
+    justify-content: left;
+}
+
+.session-bar .dropdown-menu.show:before {
+    content: none;
+}
+
+.session-bar .dropdown-menu .nav-li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.session-bar .dropdown-menu .nav-li button {
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+    color: var(--font-black-primary);
+    text-align: left;
+}
+
+.session-bar .dropdown-menu .nav-li button .navbar-p {
+    margin: 0.4rem 0.4rem;
+}
+
+.session-bar .dropdown-menu .nav-li button:hover {
+    color: var(--font-white-primary);
+    background-color: var(--navbar-color-primary) !important;
+    transition: all 0.3s ease-in-out 0s;
+}
