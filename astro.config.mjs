@@ -24,6 +24,7 @@ export default defineConfig({
     site: 'https://facanor.github.io',
     base: '/facanor',
     integrations: [tailwind(), mdx(), partytown(), sitemap(), robotsTxt()],
+    outDir: './dist',
     markdown: {
         syntaxHighlight: false,
         remarkPlugins: [remarkGfm],
