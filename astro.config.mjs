@@ -34,7 +34,7 @@ export default defineConfig({
             [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions]
         ]
     },
-    output: 'hybrid',
+    output: 'static',
     adapter: vercel({
         speedInsights: { enabled: true }
     }),
