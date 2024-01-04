@@ -11,8 +11,6 @@
         "astro": "astro",
         "db:pull": "xata pull dev",
         "codegen": "xata codegen",
-        "predeploy": "astro build",
-        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@xata.io/client": "^0.26.9",
