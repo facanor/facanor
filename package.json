@@ -11,7 +11,7 @@
         "astro": "astro",
         "db:pull": "xata pull dev",
         "codegen": "xata codegen",
-        "predeploy": "npm run build",
+        "predeploy": "astro build",
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
