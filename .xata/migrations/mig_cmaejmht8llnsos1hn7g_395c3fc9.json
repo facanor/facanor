@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmaejmht8llnsos1hn7g",
+  "parentID": "mig_cmaejicris27dutbonmg",
+  "checksum": "1:395c3fc9dda446adbee4d50b9aaf5f9f119aaf95ec200b32b70310560a53a041",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "tags",
+          "type": "multiple"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

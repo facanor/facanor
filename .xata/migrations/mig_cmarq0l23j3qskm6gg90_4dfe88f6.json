@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmarq0l23j3qskm6gg90",
+  "parentID": "mig_cmarpokris27dutbov7g",
+  "checksum": "1:4dfe88f6eefeec4cb25888fce19b6a7849ca6a07f45546342dca36dad4f01eed",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "date",
+          "type": "datetime"
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

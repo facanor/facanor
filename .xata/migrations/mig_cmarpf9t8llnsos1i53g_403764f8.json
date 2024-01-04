@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmarpf9t8llnsos1i53g",
+  "parentID": "mig_cmarpacris27dutbov6g",
+  "checksum": "1:403764f821cebb71546af3f6c74c6d80cc1ea2f5bef4fce514298103258de61b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file[]"
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

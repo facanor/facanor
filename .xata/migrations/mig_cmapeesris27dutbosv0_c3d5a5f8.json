@@ -1,0 +1,13 @@
+{
+  "id": "mig_cmapeesris27dutbosv0",
+  "parentID": "mig_cmafg7kris27dutboo20",
+  "checksum": "1:c3d5a5f850b0d9a8d15c323f4bf4cb41d3a5f74fa85c1ac4583c2fee23b5617e",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "tags",
+        "table": "publications"
+      }
+    }
+  ]
+}

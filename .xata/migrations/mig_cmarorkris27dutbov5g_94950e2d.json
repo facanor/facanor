@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmarorkris27dutbov5g",
+  "parentID": "mig_cmaron4ris27dutbov4g",
+  "checksum": "1:94950e2d9c2dc38eac2525181fbc53b82ef9d15ce53c3eb3d8b5194c2681ef1e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "title",
+          "type": "string"
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

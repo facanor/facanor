@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmaf51l23j3qskm6gbf0",
+  "parentID": "mig_cmaf4s9t8llnsos1hnj0",
+  "checksum": "1:9b437709ef5e2a234ae4ce8583980dd4a54a4b31bc6bb93638d9a51cfc44f174",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

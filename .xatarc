@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Fabian-Cano-s-workspace-k0kvqn.us-east-1.xata.sh/db/personalblog",
+  "codegen": {
+    "output": "src/lib/generated.ts"
+  }
+}

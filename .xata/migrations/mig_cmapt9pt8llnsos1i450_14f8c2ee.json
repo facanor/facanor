@@ -1,0 +1,12 @@
+{
+  "id": "mig_cmapt9pt8llnsos1i450",
+  "parentID": "mig_cmaps14ris27dutbot7g",
+  "checksum": "1:14f8c2ee480ccf1a7c9f00e56926f7b29c71e86c19d4c32f1c28e8ead871499b",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "publications"
+      }
+    }
+  ]
+}

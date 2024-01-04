@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '~/layouts/main-layout.astro';
+
+import c1 from '../assets/images/cooking/c1.png';
+import c2 from '../assets/images/cooking/c2.png';
+import c3 from '../assets/images/cooking/c3.png';
+import c4 from '../assets/images/cooking/c4.png';
+import c5 from '../assets/images/cooking/c5.png';
+import c6 from '../assets/images/cooking/c6.png';
+
+import h1 from '../assets/images/hobbies/h1.png';
+
+export const prerender = true;
+---
+
+<Layout>
+    <h1 class="mb-6 text-2xl font-bold md:text-3xl">About Me</h1>
+
+    <div class="prose prose-invert text-justify">
+        <p class="prose prose-invert mt-6 text-sm text-neutral-400">
+            I am a <span class="text-white font-semibold">Systems Engineer</span>, passionate about health research and computing. 
+            I studied my undergraduate degree at the <span class="text-white font-semibold">Universidad de los Llanos</span>, in Villavicencio, Colombia, 
+            and from there I ventured into the areas of applied health engineering knowledge. 
+            I started with simple applications of cancer tissue classification in breast cancer, 
+            exploring different machine learning techniques, and then focused my efforts on training convolutional neural network models.
+        </p>
+
+        <p class="prose prose-invert mt-3 text-sm text-neutral-400">
+            The experience would lead me to decide to study a master's degree in this area. 
+            I completed my postgraduate studies in <span class="text-white font-semibold">Biomedical Engineering</span> at the 
+            <span class="text-white font-semibold">Universidad Nacional de Colombia</span>,
+            working mainly on characterizing histological subtypes of lung cancer. During my studies, 
+            I was part of a large research project in digital pathology, mainly as a developer of a prototype 
+            web-based histopathology image viewer, with support for remote access to different high-resolution cancer images.
+        </p>
+        <p class="prose prose-invert mt-3 text-sm text-neutral-400">
+            I am currently studying a <span class="text-white font-semibold">PhD in Engineering</span>, also at the 
+            <span class="text-white font-semibold">Universidad Nacional de Colombia</span>, 
+            focusing my thesis on the early characterization of premalignant lesions of gastric cancer with histopathology images. 
+            There is still a long way to go.
+        </p>
+        <p class="prose prose-invert mt-3 text-sm text-neutral-400">
+            When I'm not studying, which seems like all the time, I like to cook new recipes, travel and be in contact with nature, 
+            play video games, and spend time with my family and friends.
+        </p>
+
+        <h2 class="mb-6 text-xl font-bold md:text-2xl">Cooking</h2>
+
+        <p class="prose prose-invert text-sm text-neutral-400 mb-8">
+            I like to cook, I am always looking for recipes. I take my time, cooking a new recipe is a task of patience and practice, 
+            but equally relaxing. I am in a constant search to <span class="font-bold text-white">perfect pizza</span> from scratch.        
+        </p>
+
+        <div class="columns-2 sm:columns-3 gap-4 my-4">
+            <div class="relative h-40 mb-4">
+                <img alt="Corn arepa" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c6.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="relative h-80 mb-4 sm:mb-0">
+                <img alt="Pepperoni Pizza" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c3.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="relative h-40 sm:h-80 sm:mb-4">
+                <img alt="Delicious Pizza" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c2.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="relative h-40 mb-4 sm:mb-0">
+                <img alt="Pancake" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c4.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="relative h-40 mb-4">
+                <img alt="Orange Chicken" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c1.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="relative h-80">
+                <img alt="French Toast" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={c5.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+        </div>
+
+        <h2 class="mb-6 text-xl font-bold md:text-2xl">Hobbies</h2>
+
+        <p class="prose prose-invert text-sm text-neutral-400">
+            I am passionate about travel and nature. I like to photograph flowers, landscape and taste local dishes if I have the opportunity. 
+        </p>
+
+        <div>
+            <div class="flex items-center justify-end text-neutral-400">
+                <p class="text-sm text-white font-semibold uppercase">Santander, Colombia</p>
+            </div>
+            <div class="relative h-80">
+                <img alt="Chicamocha Canyon" class="rounded-lg object-cover m-0" sizes="(min-width: 768px) 213px, 33vw" src={h1.src} style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="flex items-center justify-end text-neutral-400">
+                <p class="text-sm"><span class="text-white font-semibold">Chicamocha Canyon.</span> Silver thread on a full moon night in the mountain range.</p>
+            </div>
+        </div>
+    </div>
+</Layout>

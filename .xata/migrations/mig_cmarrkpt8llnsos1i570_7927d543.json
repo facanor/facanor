@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmarrkpt8llnsos1i570",
+  "parentID": "mig_cmarrj9t8llnsos1i560",
+  "checksum": "1:7927d543b55b6bd30a2981b12fa44c38b42ffc682224d23e75b6f5866551e3f4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "slug",
+          "type": "string",
+          "unique": true
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

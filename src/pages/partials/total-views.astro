@@ -1,0 +1,10 @@
+---
+import { getTotalPostViews } from '~/lib/xata';
+
+export const partial = true;
+export const prerender = false;
+
+const total = await getTotalPostViews();
+---
+
+<span>{total?.toLocaleString()}</span>

@@ -1,0 +1,75 @@
+---
+// import type { GetStaticPaths } from 'astro';
+// import { getCollection, type CollectionEntry } from 'astro:content';
+
+import Layout from '~/layouts/main-layout.astro';
+import { getPublications, increment } from '../../lib/xata';
+
+// interface Props {
+//     entry: CollectionEntry<'publications'>;
+// }
+
+// export const getStaticPaths = (async () => {
+//     const postsEntries = await getCollection('publications', ({ data }) => {
+//         return !data.draft && !data.archived;
+//     });
+//     return postsEntries.map(entry => ({
+//         params: { slug: entry.slug },
+//         props: { entry }
+//     }));
+// }) satisfies GetStaticPaths;
+
+// const { entry } = Astro.props as Props;
+// const { Content, headings } = await entry.render();
+// const formattedDate = new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(
+//     new Date(entry.data.publishedAt)
+// );
+
+export const getStaticPaths = (async () => {
+    const publications = await getPublications();
+    return publications.map(pub => ({
+        params: { slug: pub.slug },
+        props: { pub }
+    }));
+});
+  
+const { pub } = Astro.props;
+increment(pub.slug);
+---
+
+<Layout>
+    <div
+        id="progress-bar"
+        class="fixed inset-x-0 top-0 h-1 origin-[0%] scale-x-0 transform bg-neutral-200"
+    >
+    </div>
+
+    <div class="mb-2 flex items-center justify-between text-neutral-400">
+        <p class="text-xs uppercase">{ pub.category }</p>
+        <p class="text-sm">{ new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(pub.date) }</p>
+    </div>
+
+    <h1 class="text-2xl font-semibold tracking-tighter" transition:name={`post-${ pub.slug }`}>
+        { pub.title }
+    </h1>
+
+    <div class="mb-8 mt-2 flex items-center justify-between text-neutral-400">
+        <p class="text-sm">{ pub.authors }</p>
+    </div>
+
+    <article class="prose prose-invert text-justify">
+        <!-- <Content /> -->
+        <div lass="text-sm" set:html={ pub.description }></div>
+        <p class="text-sm mt-4">
+            <strong class="text-white">Published in: </strong> 
+            <a
+                href={ pub.link }
+                class="transition hover:text-teal-500 dark:hover:text-teal-400 text-neutral-400 no-underline"
+                target="_blank"
+            >
+                { pub.journal }
+            </a>
+        </p>
+        <!-- { pub.tags } -->
+    </article>
+</Layout>

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmafg7kris27dutboo20",
+  "parentID": "mig_cmaf6pl23j3qskm6gbg0",
+  "checksum": "1:4d3c885971d29e4715103e27d0454faddfeded760a835fad79f031ec7ee720e3",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "journal",
+          "type": "string"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

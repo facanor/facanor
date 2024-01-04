@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmapvgcris27dutbotbg",
+  "parentID": "mig_cmapvd523j3qskm6gfe0",
+  "checksum": "1:582316cd56fb6d7b08d37a699840243495967b1e380bfd74d0beec8137a999a4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "slug",
+          "type": "string",
+          "unique": true
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

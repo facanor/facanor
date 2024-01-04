@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmapvb523j3qskm6gfd0",
+  "parentID": "mig_cmapv8d23j3qskm6gfc0",
+  "checksum": "1:551e5799f3fe371daa6f907737dd5880f3a3fd31d69b48c45e19eff7671cd129",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "draft",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

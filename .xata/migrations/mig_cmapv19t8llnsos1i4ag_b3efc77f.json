@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmapv19t8llnsos1i4ag",
+  "parentID": "mig_cmapuupt8llnsos1i49g",
+  "checksum": "1:b3efc77f4e31e3b271c2de8a2ea7d95312b007d660b221686dddc5e2d33830d5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "journal",
+          "type": "string"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "mig_cma97od23j3qskm6gaa0",
+  "parentID": "mig_cma972t23j3qskm6ga90",
+  "checksum": "1:74a5b3502ad7c9afc60769eb00ad4c752abcd7e011ebf07c6850b12280d95182",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "date",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "January, 1 2024"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

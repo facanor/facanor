@@ -1,0 +1,17 @@
+{
+  "id": "mig_cma9bfsris27dutbomd0",
+  "parentID": "mig_cma9b3pt8llnsos1hkig",
+  "checksum": "1:c5d82536f0c21c0ade1ae8eb608f8b1f10b768de6be925ef5b6d2139ad6b72a1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "views",
+          "type": "int",
+          "defaultValue": "0"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

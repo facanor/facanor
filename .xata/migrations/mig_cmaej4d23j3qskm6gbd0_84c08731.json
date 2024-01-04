@@ -1,0 +1,12 @@
+{
+  "id": "mig_cmaej4d23j3qskm6gbd0",
+  "parentID": "mig_cmaej2kris27dutbonkg",
+  "checksum": "1:84c0873177904ed2fcf8b657fd9a43e302bb29cfe1f1823d51b766d5ec6a553f",
+  "operations": [
+    {
+      "addTable": {
+        "table": "publications"
+      }
+    }
+  ]
+}

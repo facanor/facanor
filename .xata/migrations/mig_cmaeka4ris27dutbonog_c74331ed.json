@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmaeka4ris27dutbonog",
+  "parentID": "mig_cmaek74ris27dutbonng",
+  "checksum": "1:c74331ed7905a9037423db484216189d068de6a43f3760daf4fe8228a33d781b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "date",
+          "type": "datetime"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmarq2523j3qskm6gga0",
+  "parentID": "mig_cmarq0l23j3qskm6gg90",
+  "checksum": "1:fc475333d85702b127ff091f435b7eb39eb5f1d29556c602c0643e9c6b616e2a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "authors",
+          "type": "string"
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

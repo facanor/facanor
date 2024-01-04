@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmapv3ht8llnsos1i4bg",
+  "parentID": "mig_cmapv19t8llnsos1i4ag",
+  "checksum": "1:e44fae6038e9e2c24a079591726f9e3b7200338f742e9728a141af5de2a529c7",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "date",
+          "type": "datetime"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

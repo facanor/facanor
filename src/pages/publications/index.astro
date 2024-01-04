@@ -1,0 +1,58 @@
+---
+// import { getCollection } from 'astro:content';
+import { getPublications } from '~/lib/xata';
+
+import Layout from '~/layouts/main-layout.astro';
+
+// const postsEntries = await getCollection('publications', ({ data }) => {
+//     return !data.draft && !data.archived;
+// });
+
+const publications = await getPublications();
+    
+const pubs = publications.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+---
+
+<Layout>
+    <h1 class="text-2xl font-bold md:text-3xl">Publications</h1>
+
+    <p class="prose prose-invert mb-6 text-sm">
+        Here is a list of all the articles I&apos;ve published. In total I have written{' '}
+        <strong>{pubs.length}</strong> articles.
+    </p>
+
+    <ul class="space-y-3">
+        {
+            pubs.map(pub => {
+                return (
+                <li class="rounded border border-neutral-600 p-2 hover:bg-neutral-900">
+                        <a
+                            href={ '/publications/' + pub.slug }
+                            class="hover:text-neutral-300"
+                        >
+                            <h2
+                                class="font-light tracking-tighter text-sm font-semibold"
+                                transition:name={`post-${pub.slug}`}
+                            >
+                                {pub.title}
+                            </h2>
+                            <div class="mb-2 mt-2 text-xs text-neutral-400">
+                                { pub.authors }
+                                <p class="text-xs mt-1">
+                                    <strong class="text-white">Published in: </strong> { pub.journal }
+                                </p>
+                            </div>
+                            <div class="mt-2 flex items-center justify-end text-sm text-neutral-400">
+                                <p class="text-sm">
+                                    { new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(pub.date) }
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</Layout>

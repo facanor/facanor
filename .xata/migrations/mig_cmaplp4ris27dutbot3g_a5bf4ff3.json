@@ -1,0 +1,14 @@
+{
+  "id": "mig_cmaplp4ris27dutbot3g",
+  "parentID": "mig_cmapeh4ris27dutbot00",
+  "checksum": "1:a5bf4ff3b70be85a036abe97d5d2760dffe4ef91091f0f912accba37dea50fb3",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "category",
+        "oldName": "tags",
+        "table": "publications"
+      }
+    }
+  ]
+}

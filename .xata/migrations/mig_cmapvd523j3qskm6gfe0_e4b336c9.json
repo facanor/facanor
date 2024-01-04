@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmapvd523j3qskm6gfe0",
+  "parentID": "mig_cmapvb523j3qskm6gfd0",
+  "checksum": "1:e4b336c98e6098bf65f7d73bd32b2de7896da5797ddf253300c907feefd4ad13",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "archived",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

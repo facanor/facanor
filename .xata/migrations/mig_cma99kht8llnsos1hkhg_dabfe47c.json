@@ -1,0 +1,13 @@
+{
+  "id": "mig_cma99kht8llnsos1hkhg",
+  "parentID": "mig_cma9854ris27dutboma0",
+  "checksum": "1:dabfe47ccb9c7d1487ca994de4276e023ecd9d5da09065f3d054a5288e6633b8",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "date",
+        "table": "publications"
+      }
+    }
+  ]
+}

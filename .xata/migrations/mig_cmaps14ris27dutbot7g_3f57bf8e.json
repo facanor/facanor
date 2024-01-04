@@ -1,0 +1,16 @@
+{
+  "id": "mig_cmaps14ris27dutbot7g",
+  "parentID": "mig_cmaprtcris27dutbot6g",
+  "checksum": "1:3f57bf8ee9dc64a05a73f9759ee78c30b6879d4fd88a2480680c860e06c4d985",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "image",
+          "type": "file[]"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

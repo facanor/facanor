@@ -1,0 +1,65 @@
+---
+// import type { GetStaticPaths } from 'astro';
+// import { getCollection, type CollectionEntry } from 'astro:content';
+
+import Layout from '~/layouts/main-layout.astro';
+import { getProjects, incrementprj } from '../../lib/xata';
+
+// interface Props {
+//     entry: CollectionEntry<'publications'>;
+// }
+
+// export const getStaticPaths = (async () => {
+//     const postsEntries = await getCollection('publications', ({ data }) => {
+//         return !data.draft && !data.archived;
+//     });
+//     return postsEntries.map(entry => ({
+//         params: { slug: entry.slug },
+//         props: { entry }
+//     }));
+// }) satisfies GetStaticPaths;
+
+// const { entry } = Astro.props as Props;
+// const { Content, headings } = await entry.render();
+// const formattedDate = new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(
+//     new Date(entry.data.publishedAt)
+// );
+
+export const getStaticPaths = (async () => {
+    const projects = await getProjects();
+    return projects.map(prj => ({
+        params: { slug: prj.slug },
+        props: { prj }
+    }));
+});
+  
+const { prj } = Astro.props;
+incrementprj(prj.slug);
+---
+
+<Layout>
+    <div
+        id="progress-bar"
+        class="fixed inset-x-0 top-0 h-1 origin-[0%] scale-x-0 transform bg-neutral-200"
+    >
+    </div>
+
+    <div class="mb-2 flex items-center justify-between text-neutral-400">
+        <p class="text-xs uppercase">{ prj.category }</p>
+        <p class="text-sm">{ new Intl.DateTimeFormat('en', { year: 'numeric' }).format(prj.date) }</p>
+    </div>
+
+    <h1 class="text-2xl font-semibold tracking-tighter" transition:name={`post-${ prj.slug }`}>
+        { prj.title }
+    </h1>
+
+    <div class="mb-8 mt-2 flex items-center justify-between text-neutral-400">
+        <p class="text-sm">{ prj.authors }</p>
+    </div>
+
+    <article class="prose prose-invert text-justify">
+        <!-- <Content /> -->
+        <div lass="text-sm" set:html={ prj.description }></div>
+        <!-- { pub.tags } -->
+    </article>
+</Layout>

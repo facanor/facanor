@@ -1,0 +1,7 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/node_modules/.pnpm/astro@3.5.2_typescript@5.2.2/node_modules/astro/components/viewtransitions.css");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from "/@vite/client"
+const __vite__id = "/Users/facanor/Documents/Personal Blog/node_modules/.pnpm/astro@3.5.2_typescript@5.2.2/node_modules/astro/components/viewtransitions.css"
+const __vite__css = "@keyframes astroFadeInOut {\n\tfrom {\n\t\topacity: 1;\n\t}\n\tto {\n\t\topacity: 0;\n\t}\n}\n\n@keyframes astroFadeIn {\n\tfrom {\n\t\topacity: 0;\n\t}\n}\n\n@keyframes astroFadeOut {\n\tto {\n\t\topacity: 0;\n\t}\n}\n\n@keyframes astroSlideFromRight {\n\tfrom {\n\t\ttransform: translateX(100%);\n\t}\n}\n\n@keyframes astroSlideFromLeft {\n\tfrom {\n\t\ttransform: translateX(-100%);\n\t}\n}\n\n@keyframes astroSlideToRight {\n\tto {\n\t\ttransform: translateX(100%);\n\t}\n}\n\n@keyframes astroSlideToLeft {\n\tto {\n\t\ttransform: translateX(-100%);\n\t}\n}\n\n@media (prefers-reduced-motion) {\n\t::view-transition-group(*),\n\t::view-transition-old(*),\n\t::view-transition-new(*) {\n\t\tanimation: none !important;\n\t}\n\n\t[data-astro-transition-scope] {\n\t\tanimation: none !important;\n\t}\n}\n"
+__vite__updateStyle(__vite__id, __vite__css)
+import.meta.hot.accept()
+export default __vite__css
+import.meta.hot.prune(() => __vite__removeStyle(__vite__id))

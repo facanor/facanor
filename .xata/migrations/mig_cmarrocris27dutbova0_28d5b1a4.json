@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmarrocris27dutbova0",
+  "parentID": "mig_cmarrkpt8llnsos1i570",
+  "checksum": "1:28d5b1a4d619ba4b49149cc6b2a97d86bd7e5054a99dac388d11ae8c42663ad9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "views",
+          "type": "int",
+          "defaultValue": "0"
+        },
+        "table": "projects"
+      }
+    }
+  ]
+}

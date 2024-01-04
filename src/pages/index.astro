@@ -1,0 +1,70 @@
+---
+// import { getCollection } from 'astro:content';
+import { getLatestPublications } from '../lib/xata';
+import Layout from '../layouts/main-layout.astro';
+
+// const postsEntries = await getCollection('publications', ({ data }) => {
+//     return !data.draft && !data.archived;
+// });
+    
+// const posts = postsEntries.sort(
+//     (a, b) => new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime()
+// );
+
+const publications = await getLatestPublications();
+---
+
+<Layout>
+    <section id="hero">
+        <h1 class="text-2xl font-bold md:text-3xl">Fabian Cano</h1>
+        <p class="text-sm text-neutral-400">Engineer, researcher and amateur gamer</p>
+    </section>
+
+    <section id="welcome" class="mt-8 text-justify text-neutral-400">
+        <p class="text-sm mb-4">
+            Welcome to my small personal space, where I share a little about myself and my researcher experience. 
+            I am constantly exploring new problems and possible solutions.
+        </p>
+        <p class="text-sm">
+            Currently, as a PhD student in engineering, I am focused on 
+            <span class="font-bold text-white">computational pathology</span> and <span class="font-bold text-white">cancer research</span>, 
+            taking advantage of my knowledge in <span class="font-bold text-white">image processing</span> and 
+            <span class="font-bold text-white">machine learning models</span>.
+        </p>
+    </section>
+
+    <section id="latest-publications" class="my-10">
+        <h2 class="mb-6 text-xl font-semibold md:text-2xl lg:text-3xl">Latest Publications</h2>
+
+        <ul class="space-y-3">
+            {
+                publications.map(pub => (
+                    <li class="rounded border border-neutral-600 p-2 hover:bg-neutral-900">
+                        <a
+                            href={ '/publications/' + pub.slug }
+                            class="hover:text-neutral-300"
+                        >
+                            <h2
+                                class="font-light tracking-tighter text-sm font-semibold"
+                                transition:name={`post-${pub.slug}`}
+                            >
+                                {pub.title}
+                            </h2>
+                            <div class="mb-2 mt-2 text-xs text-neutral-400">
+                                { pub.authors }
+                                <p class="text-xs mt-1">
+                                    <strong class="text-white">Published in: </strong> { pub.journal }
+                                </p>
+                            </div>
+                            <div class="mt-2 flex items-center justify-end text-sm text-neutral-400">
+                                <p class="text-sm">
+                                    { new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(pub.date) }
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</Layout>

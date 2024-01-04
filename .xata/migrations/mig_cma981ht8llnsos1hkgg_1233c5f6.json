@@ -1,0 +1,18 @@
+{
+  "id": "mig_cma981ht8llnsos1hkgg",
+  "parentID": "mig_cma97sht8llnsos1hkfg",
+  "checksum": "1:1233c5f66faa065c6cf2ad6f13fa9e3b663a0dfac4bf25c4f0cb3e114909a59e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "draft",
+          "type": "bool",
+          "notNull": true,
+          "defaultValue": "true"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

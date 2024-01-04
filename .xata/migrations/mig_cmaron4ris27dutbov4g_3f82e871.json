@@ -1,0 +1,12 @@
+{
+  "id": "mig_cmaron4ris27dutbov4g",
+  "parentID": "mig_cmapvjd23j3qskm6gff0",
+  "checksum": "1:3f82e871a45dd153a1e5ea673217860b57d4bf564c3537b077fd03798b92fa5c",
+  "operations": [
+    {
+      "addTable": {
+        "table": "projects"
+      }
+    }
+  ]
+}
