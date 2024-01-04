@@ -34,7 +34,7 @@ export const getStaticPaths = (async () => {
 });
   
 const { pub } = Astro.props;
-increment(pub.slug);
+// increment(pub.slug);
 ---
 
 <Layout>
@@ -59,7 +59,7 @@ increment(pub.slug);
 
     <article class="prose prose-invert text-justify">
         <!-- <Content /> -->
-        <div lass="text-sm" set:html={ pub.description }></div>
+        <div class="text-sm" set:html={ pub.description }></div>
         <p class="text-sm mt-4">
             <strong class="text-white">Published in: </strong> 
             <a
