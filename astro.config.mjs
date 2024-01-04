@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
+// import vercel from '@astrojs/vercel/serverless';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
@@ -33,12 +33,12 @@ export default defineConfig({
             [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions]
         ]
     },
-    output: 'hybrid',
-    adapter: vercel({
-        speedInsights: { enabled: true }
-    }),
-    experimental: {
-        devOverlay: false, // can use import.meta.env.DEV
-        contentCollectionCache: true
-    }
+    output: 'static',
+    // adapter: vercel({
+    //     speedInsights: { enabled: true }
+    // }),
+    // experimental: {
+    //     devOverlay: false, // can use import.meta.env.DEV
+    //     contentCollectionCache: true
+    // }
 });

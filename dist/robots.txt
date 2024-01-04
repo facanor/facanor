@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://facanor.github.io/facanor/sitemap-index.xml
