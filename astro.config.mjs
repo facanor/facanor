@@ -21,7 +21,8 @@ const rehypeAutolinkHeadingsOptions = {
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sergiobarria.dev',
+    site: 'https://facanor.github.io',
+    base: '/facanor',
     integrations: [tailwind(), mdx(), partytown(), sitemap(), robotsTxt()],
     markdown: {
         syntaxHighlight: false,
